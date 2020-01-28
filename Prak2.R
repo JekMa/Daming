@@ -6,11 +6,11 @@ sd(ins$age)
 boxplot(ins$bmi, main="Boxplot of Insurance BMI",ylab="BMI")
 hist(ins$charges, main="Histogram of Insurance Charges",xlab="Charges")
 plot(x=ins$bmi, y=ins$charges, main="Scatterplot of BMIvs Charges", xlab="BMI", ylab="Charges")
-plot(density(ins$bmi), main=”Density Plot For InsuranceBMI”)
+plot(density(ins$bmi), main="Density Plot For InsuranceBMI")
 
 cov(ins$age, ins$bmi)
-cov(ins[, c(“age”, “bmi”, “children”, “charges”)])
-cor(ins$age, ins$bmi)cor(ins[, c("age", "bmi", “children”, “charges”)])
+cov(ins[, c("age", "bmi", "children", "charges")])
+cor(ins$age, ins$bmi)cor(ins[, c("age", "bmi", "children", "charges")])
 aggregate(bmi ~ sex, summary, data = ins)
 
 boxplot(bmi ~ age, data = ins)
@@ -64,18 +64,18 @@ parallelplot(~ins[, c("age", "bmi", "children","charges")] | sex, data = ins)
 
 #Menyimpan gambar
 # Save as a PNG 
-filepng(“myPlot.png”)
+filepng("myPlot.png")
 plot(1:10, log(1:10))
 graphics.off()
 # Save as a JPEG 
-filejpeg(“myPlot.jpeg”)
+filejpeg("myPlot.jpeg")
 plot(1:10, log(1:10))
 graphics.off()
 # Save as a PDF 
-filepdf(“myPlot.pdf”)
+filepdf("myPlot.pdf")
 plot(1:10, log(1:10))
 graphics.off()
 # Save as a Postscript 
-filepostscript(“myPlot.ps”)
+filepostscript("myPlot.ps")
 plot(1:10, log(1:10))
 graphics.off()
